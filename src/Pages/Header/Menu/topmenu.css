@@ -1,0 +1,19 @@
+.phone{
+    position: absolute;
+    right: 50px;
+}
+.topmenu{
+    background-color: #00BDBB;
+}
+.menubar{
+    margin: 0px 100px;
+    position: relative;
+    top: -20px;
+
+}
+.nav-color{
+    background-color: rgb(142, 196, 247);
+}
+.menuu-text{
+    color: gray;
+}

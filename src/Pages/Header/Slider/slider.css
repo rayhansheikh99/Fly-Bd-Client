@@ -1,0 +1,31 @@
+
+
+.slider{
+    position: relative;
+    top: -150px;
+    z-index: -1;
+}
+.size-slider{
+    height: 650px;
+}
+.slider-text{
+    color: rgb(255, 255, 255);
+    
+}
+.slider-text2{
+    color: rgb(255, 255, 255);
+    
+}
+.text-group{
+    background-color: rgba(146, 152, 160, 0);
+    border-radius: 30px;
+    margin-left: 10%;
+    margin-right: 10%;
+    
+}
+@media only screen and (max-width: 640px){
+    .size-slider{
+        height: 300px;
+        width: 100%;
+    }
+} 
