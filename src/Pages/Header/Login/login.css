@@ -1,0 +1,44 @@
+.page-size{
+    background-image: white gray;
+    height: 100vh;
+    padding: 30px;
+    border-radius: 20px;
+    width: 100%;
+    padding: 10% 30% 20%;
+
+}
+.body-login{
+    background-color: gray;
+}
+.login-form{
+    background-color: rgb(220, 228, 220);
+    padding: 10% 15%;
+}
+.login-form p{
+    margin: 0px;
+}
+.btn-desing-all{
+    background-image: linear-gradient(to right, rgb(67, 206, 216), rgba(153, 209, 241, 0.774));
+    border: none;
+    border-radius: 20px;
+}
+
+.btn-desing-all:hover{
+    background-image: linear-gradient(to right, rgb(58, 155, 134), rgba(67, 147, 179, 0.774));
+}
+    @media only screen and (max-width: 640px){
+    .page-size{
+        padding-top: 20%;
+    }
+    .login-form{
+        background-color: transparent;
+        padding:0;
+        margin: 0;
+        
+        
+    }
+    .input-size{
+        
+    }
+   
+}

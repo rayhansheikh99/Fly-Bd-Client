@@ -1,0 +1,14 @@
+.signup-form{
+    margin-bottom: 100px;
+    
+}
+.bg-color{
+    background-color: rgba(128, 128, 128, 0);
+    border-width: 0 0 2px;
+    border-color: rgb(63, 192, 153);
+    outline: 0;
+}
+.google-sign{
+    cursor: pointer;
+    color: blue;
+}

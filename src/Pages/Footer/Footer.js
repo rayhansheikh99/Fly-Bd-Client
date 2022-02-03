@@ -1,8 +1,8 @@
 import { faFacebookSquare, faInstagramSquare, faTwitterSquare, faYoutube } from '@fortawesome/free-brands-svg-icons';
-import { faMapMarkedAlt, faPhoneSquare } from '@fortawesome/free-solid-svg-icons';
+import { faMapMarkerAlt, faPaperPlane } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
-import { Button, Nav } from 'react-bootstrap';
+import { Nav } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import './footer.css'
 
@@ -11,12 +11,24 @@ const Footer = () => {
         <div>
 
           {/* footer section  */}
-            <div className="footer-container">
+          
+        <div className="footer-container">
         <div className="container">
+        <div className="right-footer-container">
+                <h5>Start using FlyBD today</h5>
+                <input
+                  className="footer-input"
+                  type="text"
+                  placeholder="Enter Email"   
+                />
+               <a href='/'> <FontAwesomeIcon className='paper-icon' icon={faPaperPlane}/></a>
+                <br/>
+            </div><br/>
+
           <div className="row">
             <div className="col-md-5">
-              <div className="left-container text-start">
-                <h1>FLY BD</h1>
+              <div className="left-container text-start mt-4">
+                <h5>Let's chat</h5>
                 <div className="icons-container d-flex text-center ">
                   <div className="icon">
                   <a href="https://www.instagram.com/" target="_blank" rel='noreferrer'><FontAwesomeIcon icon={faInstagramSquare} /></a>
@@ -31,10 +43,6 @@ const Footer = () => {
                   <a href="https://www.facebook.com/" target="_blank" rel='noreferrer'><FontAwesomeIcon icon={faFacebookSquare} /></a>
                   </div>
                 </div>
-
-                <p className="mt-5">
-                  <small>FLY BD &copy; All rights reserved.</small>
-                </p>
               </div>
             </div>
             <div className="col-md-2">
@@ -51,31 +59,28 @@ const Footer = () => {
             </div>
             <div className="col-md-5">
               <div className="right-footer-container">
-                <h3>Sign up for the Newsletter</h3>
-                <input
-                  className="footer-input"
-                  type="text"
-                  placeholder="Enter Email"
-                /> <br/>
-                <Button className='mt-1'>Subscribe</Button>
-
+               
                 <div className="map d-flex align-items-center justify-content-center">
-                  <div className="foter-phone-icon">
-                    <FontAwesomeIcon icon={faMapMarkedAlt} />
-                  </div>
-                  <div className='ms-2'>
-                    <p>
+                  <div className="d-flex">
+                    <FontAwesomeIcon className='mt-1' icon={faMapMarkerAlt} />
+                    <p className='ms-2'>
                       Road No. 1, Dhanmondi, Dhaka
                       <br /> Dhaka Division, Bangladesh
                     </p>
                   </div>
+                  
+                </div>
+                <div>
+                <p className="mt-2 d-flex align-items-center justify-content-center">
+                  <small>FlyBD &copy; All rights reserved.</small>
+                </p>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-        </div>
+    </div>
     );
 };
 
