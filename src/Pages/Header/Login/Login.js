@@ -6,12 +6,19 @@ import { Link, useLocation } from 'react-router-dom';
 import { useHistory } from 'react-router-dom/cjs/react-router-dom.min';
 // import useAuth from '../../../Hooks/useAuth';
 import useFirebase from '../../../Hooks/useFirebase';
+import Menu from '../Menu/Menu';
+import Topmenu from '../Menu/Topmenu';
+import Footer from '../../Footer/Footer';
 import './login.css'
 const Login = () => {
   //login system apply here
   const { handleSignIn, handleEmailChange,signInWithGoogle, handlePasswordChange} = useFirebase();
 
     return (
+     <div>
+       <Topmenu/>
+          <Menu/>
+         
         <div className='page-size'>
             <Form className='' onSubmit={handleSignIn}>
               <h5>Please Login Here</h5><br/>
@@ -31,6 +38,9 @@ Login
 </Button><br/>
 </Form>
         </div>
+        <Footer/>
+        </div>
+
     );
 };
 

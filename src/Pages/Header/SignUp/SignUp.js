@@ -2,6 +2,9 @@ import React from 'react';
 import { Form, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import useFirebase from '../../../Hooks/useFirebase';
+import Menu from '../Menu/Menu';
+import Topmenu from '../Menu/Topmenu';
+import Footer from '../../Footer/Footer';
 import './signup.css'
 
 const SignUp = () => {
@@ -11,6 +14,9 @@ const SignUp = () => {
 
 
     return (
+      <div>
+      <Topmenu/>
+         <Menu/>
         <div className='page-size'>
         <Form className='signup-form' onSubmit={handleRegistration}>
           <h5>Please Sign Up Here</h5><br/>
@@ -36,6 +42,8 @@ Sign Up
 </Form>
 
     </div>
+    <Footer/>
+        </div>
     );
 };
 

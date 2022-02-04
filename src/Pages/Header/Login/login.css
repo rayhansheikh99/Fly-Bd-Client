@@ -1,10 +1,10 @@
 .page-size{
     background-image: white gray;
-    height: 100vh;
-    padding: 30px;
+    height: 500px;
+    /* padding: 30px; */
     border-radius: 20px;
     width: 100%;
-    padding: 10% 30% 20%;
+    padding: 3% 30%;
 
 }
 .body-login{
