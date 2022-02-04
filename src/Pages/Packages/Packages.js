@@ -7,7 +7,7 @@ import './packages.css'
 
 const Packages = (props) => {
 
-    const{_id, name, image, price, describe, duration}=props.packagge
+    const{_id, name, image, price, duration}=props.packagge
 
     return (
         <div>
@@ -19,11 +19,11 @@ const Packages = (props) => {
                     <ListGroup className="list-group-flush">
                         <ListGroupItem><b>Price:</b> {price}</ListGroupItem>
                         <ListGroupItem><b>Duration:</b> {duration}</ListGroupItem>
-                        <ListGroupItem>{describe.slice(0,200)}...</ListGroupItem>
+                        {/* <ListGroupItem>{describe.slice(0,200)}...</ListGroupItem> */}
                     </ListGroup>
                     <Card.Body className='mx-auto'>
                     
-                  <Link to={`/Shipping/${_id}`}><Button className='px-5 btn-design'><FontAwesomeIcon className='me-2' icon={faCartPlus} />Book Now</Button></Link>
+                  <Link to={`/packageDetails/${_id}`}><Button className='px-3 btn-design'><FontAwesomeIcon className='me-2' icon={faCartPlus} />Book Now</Button></Link>
                     
                     </Card.Body>
                 </Card>

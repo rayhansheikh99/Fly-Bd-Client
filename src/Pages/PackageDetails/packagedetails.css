@@ -1,0 +1,30 @@
+.details{
+    padding: 2% 0;
+    margin-left: 5%;
+}
+/* .details-card{
+    margin: 0%;
+    border-radius: 25px;
+    background-color: rgb(247, 224, 247);
+} */
+.design-body{
+    border-radius: 10% 10% 0 0;
+    margin-left: 10%;
+}
+.btn-design{
+    background-image: linear-gradient(to right, rgb(65, 192, 118), rgba(78, 202, 211, 0.774));
+    border: none;
+}
+.btn-design:hover{
+    background-image: linear-gradient(to right, rgba(12, 134, 18, 0.596), rgba(61, 114, 184, 0.774));
+    border: none;
+}
+@media only screen and (max-width: 640px){
+    .details-card{
+        margin: 10% 10%;
+        border-radius: 25px;
+    }
+   .design-body{
+       margin: 0;
+   }
+}

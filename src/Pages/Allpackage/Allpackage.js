@@ -1,27 +1,21 @@
-import React, { useState } from 'react';
-import { useEffect } from 'react';
-import Footer from '../Footer/Footer';
-import Menu from '../Header/Menu/Menu';
-import Topmenu from '../Header/Menu/Topmenu';
-import Slider from '../Header/Slider/Slider';
+import React, { useEffect, useState } from 'react';
 import Packages from '../Packages/Packages';
-import './home.css'
-const Home = () => {
+import './allpackage.css'
 
+const Allpackage = () => {
     const [packages, setPackages]=useState([])
     // data fetch 
     useEffect(()=>{
         fetch('http://localhost:5000/packages')
         .then(res=>res.json())
-        .then(data=> setPackages(data.slice(0,6)))
+        .then(data=> setPackages(data))
 
     },[])
 
     return (
-        <div>
-            <Slider/>
-            <div className='card-design1'>
-            <div><h4 className='text-center'>MOST POPULAR TOURS</h4></div>
+        <div className='package-page'>
+           <div className='mt-1 card-design1'>
+            <div><h4 className='text-center'>OUR VALUABLE PACKAGES</h4></div>
             <p className='text-center text-secondary'>Travel is the movement of people between distant geographical locations. <br/>Travel can be done by foot, bicycle, automobile, train, boat, bus, airplane, ship or other means, with or without luggage, and can be one way or round trip.</p>
             <div className="row row-cols-1 row-cols-md-3 g-4 pb-3 mt-3">
             
@@ -30,8 +24,9 @@ const Home = () => {
             }
         </div>
         </div>
+            
         </div>
     );
 };
 
-export default Home;
+export default Allpackage;

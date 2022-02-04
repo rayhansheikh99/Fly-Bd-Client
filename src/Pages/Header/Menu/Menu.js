@@ -1,3 +1,5 @@
+import { faUserAlt } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import { Container, Nav, Navbar } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
@@ -20,7 +22,7 @@ const Menu = () => {
           className="d-inline-block align-top"
         />
   </Navbar.Brand>
-  <Navbar.Brand className='text-danger fw-bold' as={Link} to="/home">FLYBD</Navbar.Brand>
+  <Navbar.Brand className='text-danger fw-bold' as={Link} to="/home"><span className='text-success'>FLY</span>BD</Navbar.Brand>
   <Navbar.Toggle aria-controls="responsive-navbar-nav" />
   <Navbar.Collapse id="responsive-navbar-nav">
     <Nav className="me-auto">
@@ -35,7 +37,7 @@ const Menu = () => {
     </Nav>
     {user?.email?
       <Navbar.Text className='text-secondary'>
-        Welcome: {user?.displayName}
+        <FontAwesomeIcon className='paper-icon' icon={faUserAlt}/>{user?.displayName}
       </Navbar.Text>: ('')}
     
   </Navbar.Collapse>

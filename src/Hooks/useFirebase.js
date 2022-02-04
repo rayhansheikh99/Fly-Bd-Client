@@ -21,12 +21,16 @@ const useFirebase = ()=>{
     const provider = new GoogleAuthProvider()
     const auth = getAuth();
  
-    // const loginWithGoogle = () => {
-    //     setIsLoading(true);
-    //     // saveUser(user.email, user.displayName, 'PUT');
-    //    return signInWithPopup(auth, provider);
+    const loginWithGoogle = (location, history) => {
+        setIsLoading(true);
+        // saveUser(user.email, user.displayName, 'PUT');
+       signInWithPopup(auth, provider)
+       .then((result) => {
+        const destination = location?.state?.from || '/';
+        history.replace(destination);
+       })
      
-    // }
+    }
 
     const signInWithGoogle = (location, history) => {
         setIsLoading(true);
@@ -152,7 +156,8 @@ const useFirebase = ()=>{
         signInWithEmailAndPassword,
         saveUser,
         signInWithGoogle,
-        admin
+        admin,
+        loginWithGoogle
 
 
         

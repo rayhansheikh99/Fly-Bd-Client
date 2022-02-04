@@ -1,0 +1,18 @@
+
+.booking-form input {
+    display: block;
+    margin-top: 10px;
+    padding: 5px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    width: 300px;
+}
+.error{
+    color: red;
+}
+
+.btn-book{
+    margin-top: 10px;
+    background-color:rgb(56, 147, 153);
+    
+}
