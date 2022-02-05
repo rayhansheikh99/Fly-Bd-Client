@@ -14,7 +14,7 @@ const MyOrders = () => {
     
     // data fetch 
     useEffect(()=>{
-        fetch(`http://localhost:5000/orders?email=${user.email}`)
+        fetch(`https://fast-coast-67551.herokuapp.com/orders?email=${user.email}`)
         .then(res=>res.json())
         .then(data=> setOrders(data))
         console.log(orders.name)
@@ -26,7 +26,7 @@ const MyOrders = () => {
            const handleDeleteOrder = id =>{
             const proceed = window.confirm("Are you want to delete?")
             if(proceed){
-                const url = `http://localhost:5000/orders/${id}`
+                const url = `https://fast-coast-67551.herokuapp.com/orders/${id}`
             fetch(url, {
                 method:'DELETE'
             })
@@ -56,8 +56,6 @@ const MyOrders = () => {
         <div className='order'>
         <div className='d-flex row row-cols-1 row-cols-md-3 g-4 pb-3 mt-3'>
         
-         
-            
                 {
                    
                         orders.map(order => 

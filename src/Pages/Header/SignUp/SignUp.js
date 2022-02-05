@@ -1,5 +1,7 @@
 import React from 'react';
 import { Form, Button } from 'react-bootstrap';
+import { useLocation } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import useFirebase from '../../../Hooks/useFirebase';
 import './signup.css'
@@ -8,7 +10,14 @@ const SignUp = () => {
   
   //sign up system apply here
   const {signInWithGoogle, handleNameChange, handleRegistration, handleEmailChange, handlePasswordChange, error} = useFirebase();
+  
+  const history = useHistory();
+  let location = useLocation();
 
+
+  const handleGoogleSignIn = () => {
+    signInWithGoogle(location, history)
+  }
 
     return (
         <div className='page-size'>
@@ -27,7 +36,7 @@ const SignUp = () => {
           <div>{error}</div>
           </Form.Group>
           <div className='d-flex'>
-            <p onClick={signInWithGoogle} className='google-sign me-4'>Sign Up with Google</p>
+            <p onClick={handleGoogleSignIn} className='google-sign me-4'>Sign Up with Google</p>
             <Link to="/login"> Already Have an Account</Link>
             </div>
             <Button className='px-5 btn-desing-all px-5' type="submit" >

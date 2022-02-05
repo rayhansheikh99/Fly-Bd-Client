@@ -11,11 +11,9 @@ const Reviews = (props) => {
         <div>
              <Card className="card h-100 card-design card2">
                    
-                    <Card.Body>
-                        <Card.Title>{name}</Card.Title>
-                    </Card.Body>
-                    <Card.Body>
-                        <p> {review}</p>
+                    <Card.Body className='d-block mx-auto'>
+                        <h5>{name}</h5>
+                        <p><q>{review}</q></p>
                         <RatingView ratingValue= {rating} /* RatingView Props */ />
                     </Card.Body>
                 </Card>

@@ -33,7 +33,7 @@ const Menu = () => {
     {user.email && <Nav.Link as={Link} to="/dashboard" className='menu-hover me-3 text-secondary'>Dashboard</Nav.Link>}
       {user?.email?
        <Nav.Link onClick={logOut} as={Link} to="/login" className='me-5 menu-hover bg-danger text-white rounded'>Logout</Nav.Link>:
-      <Nav.Link as={Link} to="/login" className='menu-hover text-secondary'>Login</Nav.Link>}
+      <Nav.Link as={Link} to="/login" className='menu-hover bg-success text-white rounded'>Login</Nav.Link>}
     </Nav>
     {user?.email?
       <Navbar.Text className='text-secondary'>

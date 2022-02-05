@@ -12,7 +12,7 @@ const Booking = () => {
     const {serviceId} = useParams();
 
     useEffect(()=>{
-        fetch(`http://localhost:5000/packages`)
+        fetch(`https://fast-coast-67551.herokuapp.com/packages`)
         .then(res => res.json())
         .then(data => setProduct(data))
     },[])
@@ -28,7 +28,7 @@ const Booking = () => {
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
     const { user } = useAuth();
     const onSubmit = data => {
-        fetch('http://localhost:5000/orders', {
+        fetch('https://fast-coast-67551.herokuapp.com/orders', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
