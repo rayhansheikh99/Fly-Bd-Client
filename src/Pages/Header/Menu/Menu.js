@@ -11,7 +11,7 @@ const Menu = () => {
   const {user, logOut} = useAuth();
     return (
         <div className='menubar'>
-            <Navbar collapseOnSelect expand="lg" className=' menubar nav-color' variant="dark">
+            <Navbar collapseOnSelect expand="lg" className='rounded menubar nav-color' variant="dark">
   <Container>
   <Navbar.Brand as={Link} to="/home">
         <img
@@ -30,9 +30,9 @@ const Menu = () => {
       <Nav.Link as={Link} to="/packages" className='menu-hover text-secondary'>Packages</Nav.Link>
     </Nav>
     <Nav>
-    {user.email && <Nav.Link as={Link} to="/dashboard" className='menu-hover text-secondary'>Dashboard</Nav.Link>}
+    {user.email && <Nav.Link as={Link} to="/dashboard" className='menu-hover me-3 text-secondary'>Dashboard</Nav.Link>}
       {user?.email?
-       <Nav.Link onClick={logOut} as={Link} to="/login" className='me-5 menu-hover text-secondary'>Logout</Nav.Link>:
+       <Nav.Link onClick={logOut} as={Link} to="/login" className='me-5 menu-hover bg-danger text-white rounded'>Logout</Nav.Link>:
       <Nav.Link as={Link} to="/login" className='menu-hover text-secondary'>Login</Nav.Link>}
     </Nav>
     {user?.email?

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { Card,Button, ListGroup, ListGroupItem, Col, Row } from 'react-bootstrap';
-import { Link, useParams } from 'react-router-dom';
+import { Card, ListGroup, ListGroupItem, Col, Row } from 'react-bootstrap';
+import {  useParams } from 'react-router-dom';
 import Booking from '../Booking/Booking';
 import './packagedetails.css'
 

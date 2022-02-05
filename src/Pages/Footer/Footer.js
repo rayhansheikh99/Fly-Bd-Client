@@ -7,6 +7,7 @@ import { Link } from 'react-router-dom';
 import './footer.css'
 
 const Footer = () => {
+  const today = new Date();
     return (
         <div>
 
@@ -72,7 +73,7 @@ const Footer = () => {
                 </div>
                 <div>
                 <p className="mt-2 d-flex align-items-center justify-content-center">
-                  <small>FlyBD &copy; All rights reserved.</small>
+                  <small>FlyBD &copy; {today.getFullYear()} All rights reserved.</small>
                 </p>
                 </div>
               </div>

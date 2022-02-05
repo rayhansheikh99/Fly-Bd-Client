@@ -1,13 +1,11 @@
 import React, { useState } from 'react';
 import { useEffect } from 'react';
-import Footer from '../Footer/Footer';
-import Menu from '../Header/Menu/Menu';
-import Topmenu from '../Header/Menu/Topmenu';
+import AllReview from '../AllReview/AllReview';
 import Slider from '../Header/Slider/Slider';
 import Packages from '../Packages/Packages';
-import './home.css'
+import './home.css';
 const Home = () => {
-
+    
     const [packages, setPackages]=useState([])
     // data fetch 
     useEffect(()=>{
@@ -28,8 +26,10 @@ const Home = () => {
             {
               packages.map(packagge=> <Packages key={packagge._id} packagge={packagge}/>)
             }
+
         </div>
         </div>
+        <AllReview/>
         </div>
     );
 };

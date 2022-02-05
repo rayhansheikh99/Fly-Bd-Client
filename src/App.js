@@ -7,6 +7,7 @@ import './App.css';
 import AuthProvider from "./Contexts/AuthProvider";
 import Allpackage from "./Pages/Allpackage/Allpackage";
 import Booking from "./Pages/Booking/Booking";
+import Dashboard from "./Pages/Dashboard/Dashboard";
 import Footer from "./Pages/Footer/Footer";
 import Login from "./Pages/Header/Login/Login";
 import PrivateRoute from "./Pages/Header/Login/PrivateRoute/PrivateRoute";
@@ -15,6 +16,10 @@ import Topmenu from "./Pages/Header/Menu/Topmenu";
 import SignUp from "./Pages/Header/SignUp/SignUp";
 import Home from "./Pages/Home/Home";
 import PackageDetails from "./Pages/PackageDetails/PackageDetails";
+import MyOrders from './Pages/MyOrders/MyOrders';
+import Review from './Pages/Review/Review';
+import Payment from './Pages/MyOrders/Payment/Payment';
+import Error from './Pages/Error/Error';
 
 function App() {
   return (
@@ -42,9 +47,24 @@ function App() {
          <Route path='/booking'>
             <Booking/>
          </Route>
+         <Route path='/myorders'>
+            <MyOrders/>
+         </Route>
+         <Route path='/review'>
+            <Review/>
+         </Route>
+         <Route path='/payment'>
+            <Payment/>
+         </Route>
+         <Route path='/dashboard'>
+            <Dashboard/>
+         </Route>
          <PrivateRoute exact path='/PackageDetails/:serviceId'>
             <PackageDetails/>
          </PrivateRoute>
+         <Route path='*'>
+            <Error/>
+         </Route>
         </Switch>
         <Footer/>
       </Router>

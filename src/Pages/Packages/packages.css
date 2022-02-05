@@ -10,7 +10,7 @@
 }
 .card-design:hover{
     transform: scale(0.9); 
-    background-color: rgba(0, 255, 115, 0.349);
+    background-color: rgba(0, 255, 179, 0.219);
 }
 .card-footer{
     background-color: rgba(130, 146, 74, 0.295) !important;
