@@ -20,6 +20,9 @@ import MyOrders from './Pages/MyOrders/MyOrders';
 import Review from './Pages/Review/Review';
 import Payment from './Pages/MyOrders/Payment/Payment';
 import Error from './Pages/Error/Error';
+import Contact from "./Pages/Contact/Contact";
+import AddProduct from './Pages/AddProduct/AddProduct';
+import About from './Pages/About/About';
 
 function App() {
   return (
@@ -52,6 +55,15 @@ function App() {
          </Route>
          <Route path='/review'>
             <Review/>
+         </Route>
+         <Route path='/about'>
+            <About/>
+         </Route>
+         <Route path='/addproduct'>
+            <AddProduct/>
+         </Route>
+         <Route path='/contact'>
+            <Contact/>
          </Route>
          <Route path='/payment'>
             <Payment/>
