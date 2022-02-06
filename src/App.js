@@ -23,6 +23,7 @@ import Error from './Pages/Error/Error';
 import Contact from "./Pages/Contact/Contact";
 import AddProduct from './Pages/AddProduct/AddProduct';
 import About from './Pages/About/About';
+import ManageProducts from './Pages/ManageProducts/ManageProducts';
 
 function App() {
   return (
@@ -61,6 +62,9 @@ function App() {
          </Route>
          <Route path='/addproduct'>
             <AddProduct/>
+         </Route>
+         <Route path='/manageproducts'>
+            <ManageProducts/>
          </Route>
          <Route path='/contact'>
             <Contact/>

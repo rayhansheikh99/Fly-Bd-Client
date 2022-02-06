@@ -10,7 +10,7 @@ const ManageProducts = () => {
    
     // data fetch 
     useEffect(()=>{
-        fetch('https://fast-coast-67551.herokuapp.com/products')
+        fetch('https://fast-coast-67551.herokuapp.com/packages')
         .then(res=>res.json())
         .then(data=> setProducts(data))
 
@@ -19,7 +19,7 @@ const ManageProducts = () => {
     const handleDeleteProduct = id =>{
         const proceed = window.confirm("Are you want to delete?")
         if(proceed){
-            const url = `https://fast-coast-67551.herokuapp.com/products/${id}`
+            const url = `https://fast-coast-67551.herokuapp.com/packages/${id}`
         fetch(url, {
             method:'DELETE'
         })
@@ -43,7 +43,7 @@ const ManageProducts = () => {
                     <Sidebar/>
                        
                     </Col>
-                    {/* <Col className='mt-5 mx-auto' md={9} xs={8}>
+                    <Col className='mt-5 mx-auto' md={9} xs={8}>
                     <h4 className='mt-5'>Products Management</h4>
                     <div className='mt-5'>
                     <div><h4>OUR PRODUCTS</h4></div>
@@ -60,7 +60,7 @@ const ManageProducts = () => {
                             </Card.Body>
                             <ListGroup className="list-group-flush">
                                 <ListGroupItem><b>Price:</b> {product.price}</ListGroupItem>
-                                <ListGroupItem>{product.describe}</ListGroupItem>
+                                
                             </ListGroup>
                             <Card.Body>
                             
@@ -75,7 +75,7 @@ const ManageProducts = () => {
                        
                     </div>
                     </div>
-                    </Col>  */}
+                    </Col>
                 </Row>
         </div>
     );
