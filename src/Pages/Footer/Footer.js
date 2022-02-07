@@ -27,7 +27,7 @@ const Footer = () => {
             </div><br/>
 
           <div className="row">
-            <div className="col-md-5">
+            <div className="col-md-3">
               <div className="left-container text-center text-start mt-4">
                 <h5>Let's chat</h5>
                 <div className="icons-container d-flex justify-content-center ">
@@ -46,7 +46,7 @@ const Footer = () => {
                 </div>
               </div>
             </div>
-            <div className="col-md-2">
+            <div className="col-md-6">
               <div className="footer-menu-container">
                 <ul>
                   
@@ -58,7 +58,7 @@ const Footer = () => {
                 </ul>
               </div>
             </div>
-            <div className="col-md-5">
+            <div className="col-md-3">
               <div className="right-footer-container">
                
                 <div className="map d-flex align-items-center justify-content-center">

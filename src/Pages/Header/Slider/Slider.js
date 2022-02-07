@@ -18,7 +18,7 @@ const Slider = () => {
                     />
                     <Carousel.Caption className='text-group'>
                     <h2 className='slider-text'>YOUR JOURNEY BEGINS</h2>
-                    <p className='slider-text'>Making your experience with us.</p>
+                    <p className='text-white'>Making your experience with us.</p>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
@@ -28,8 +28,8 @@ const Slider = () => {
                     alt="Second slide"
                     />
                     <Carousel.Caption className='text-group'>
-                    <h2 className='slider-text2'>A MYSTICAL ADVENTURE</h2>
-                    <p className='slider-text2'>We want to make your visit as convenient as possible.</p>
+                    <h2 className='slider-text'>A MYSTICAL ADVENTURE</h2>
+                    <p className='text-white'>We want to make your visit as convenient as possible.</p>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
@@ -39,8 +39,8 @@ const Slider = () => {
                     alt="Third slide"
                     />
                     <Carousel.Caption className='text-group'>
-                    <h2 className='slider-text'>TOP URBAN DESTINATIONS</h2>
-                    <p className='slider-text'>Everyone working in the office is very knowledgeable.</p>
+                    <h2 className='slider-text'>TOP DESTINATIONS</h2>
+                    <p className='text-white'>Everyone working in the office is very knowledgeable.</p>
                     </Carousel.Caption>
                 </Carousel.Item>
             </Carousel>
