@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { Button, Col, Row } from 'react-bootstrap';
 import { useForm } from 'react-hook-form';
-import Dashboard from '../Dashboard/Dashboard';
+
 import Sidebar from '../Dashboard/Sidebar/Sidebar';
 import './addproduct.css'
 
@@ -9,7 +9,7 @@ const AddProduct = () => {
       //useform use here and POST Method Apply
       const { register, handleSubmit, reset } = useForm();
       const onSubmit = data => {
-          fetch('https://obscure-garden-07693.herokuapp.com/products', {
+          fetch('https://fast-coast-67551.herokuapp.com/packages', {
               method: 'POST',
               headers: {
                   'content-type': 'application/json'
@@ -26,17 +26,17 @@ const AddProduct = () => {
       };
       return (
         
-          <div className='dash-page'>
+          <div className=''>
                  <Row>
                     <Col className='sidebar' md={2} xs={2}>      
                     <Sidebar/>
                        
                     </Col>
                     <Col className='mx-auto' md={10} xs={10}>
-                    <h4>Add Product From Here</h4>
+                    <h4 className='text-center'>Add Package From Here</h4>
               <form className="booking-form product-form" onSubmit={handleSubmit(onSubmit)}>
           
-                  <input  placeholder="Product Name" defaultValue="" {...register("name",{ required: true })} />
+                  <input  placeholder="Package Name" defaultValue="" {...register("name",{ required: true })} />
                   <input  placeholder="Price" defaultValue="" {...register("price", { required: true })} />
                   <input placeholder="Description" defaultValue="" {...register("describe",{ required: true })} />
                   <input placeholder="Image Link" defaultValue="" {...register("image",{ required: true })} />

@@ -1,7 +1,7 @@
 import { faTrash } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useEffect, useState } from 'react';
-import { Col, Row } from 'react-bootstrap';
+import { Button, Card, Col, ListGroup, ListGroupItem, Row } from 'react-bootstrap';
 import useAuth from '../../Hooks/useAuth';
 import Sidebar from '../Dashboard/Sidebar/Sidebar';
 import './manageorders.css'
@@ -11,7 +11,7 @@ const ManageOrders = () => {
     const [orders, setOrders]=useState([])
     // data fetch 
     useEffect(()=>{
-        fetch('https://obscure-garden-07693.herokuapp.com/allorder')
+        fetch('https://fast-coast-67551.herokuapp.com/allorder')
         .then(res=>res.json())
         .then(data=> setOrders(data))
 
@@ -22,7 +22,7 @@ const ManageOrders = () => {
        const handleDeleteOrder = id =>{
         const proceed = window.confirm("Are you want to delete?")
         if(proceed){
-            const url = `https://obscure-garden-07693.herokuapp.com/orders/${id}`
+            const url = `https://fast-coast-67551.herokuapp.com/orders/${id}`
         fetch(url, {
             method:'DELETE'
         })
@@ -40,28 +40,36 @@ const ManageOrders = () => {
 
 
     return (
-        <div className='dash-page'>
+        <div className=''>
              <Row>
                     <Col className='sidebar' md={2} xs={2}>      
                     <Sidebar/>
                        
                     </Col>
                     <Col className='mx-auto mt-5'  md={10} xs={10}>
-                    <div className=' mb-5'><h2 className=''>Manage All Order</h2></div>
-            <div className='d-flex mt-2 order-list-all'>
+                    <div className=' mb-5 text-center'><h2 className=''>Manage All Order</h2></div>
+                    <div className="row row-cols-1 row-cols-md-3 g-4 pb-3 mt-3 order">
             
-             <ul>
+             
                 {
                     //showing data here
-                    orders.map(order => <li
-                        key={order._id}
-                        >Product Name: {order.ProductName} E-mail: {order.email} Phone: {order.phone}
-                        <span className='icon-delete'>
-                        <FontAwesomeIcon onClick={()=>handleDeleteOrder(order._id)} className='ms-3 mt-1' icon={faTrash} />
-                        </span>
-                    </li>)
+                    orders.map(order => 
+                        <Card className="card h-100 me-2 rounded"  key={order._id}>
+                           
+                           <ListGroup className="list-group-flush ">
+                            <ListGroupItem className='font-monospace bg-secondary text-white '>Tour Package: {order.packageName}</ListGroupItem>
+                            <ListGroupItem>E-mail: {order.email}</ListGroupItem>
+                            <ListGroupItem>Phone: {order.phone}</ListGroupItem>
+                        </ListGroup>
+                        <Card.Body>
+                        <Button onClick={()=>handleDeleteOrder(order._id)} className='px-2 btn-design'><FontAwesomeIcon onClick={()=>handleDeleteOrder(order._id)} className='me-1 icon-delete' icon={faTrash} />DELETE</Button>
+                        {/* <Button className='me-2 py-2 px-2'>{order.status}</Button> */}
+                        </Card.Body>
+                    </Card>
+                    
+                    )
                 }
-            </ul>
+            
         </div>
                     </Col> 
                 </Row>

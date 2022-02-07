@@ -24,6 +24,8 @@ import Contact from "./Pages/Contact/Contact";
 import AddProduct from './Pages/AddProduct/AddProduct';
 import About from './Pages/About/About';
 import ManageProducts from './Pages/ManageProducts/ManageProducts';
+import MakeAdmin from "./Pages/MakeAdmin/MakeAdmin";
+import ManageOrders from "./Pages/ManageOrders/ManageOrders";
 
 function App() {
   return (
@@ -60,11 +62,17 @@ function App() {
          <Route path='/about'>
             <About/>
          </Route>
+         <Route path='/makeadmin'>
+            <MakeAdmin/>
+         </Route>
          <Route path='/addproduct'>
             <AddProduct/>
          </Route>
          <Route path='/manageproducts'>
             <ManageProducts/>
+         </Route>
+         <Route path='/manageorders'>
+            <ManageOrders/>
          </Route>
          <Route path='/contact'>
             <Contact/>

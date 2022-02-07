@@ -20,7 +20,7 @@ const MyOrders = () => {
         console.log(orders.name)
 
 
-    },[])
+    },)
 
            //delete an order and DELETE Method Apply Here
            const handleDeleteOrder = id =>{
