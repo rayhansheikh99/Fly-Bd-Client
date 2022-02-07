@@ -30,7 +30,9 @@
         margin-top: 80px;
         height: 100vh;
         text-align: center;
-     
-    
     }
+    .order{
+        margin: 0%;
+    }
+
 }

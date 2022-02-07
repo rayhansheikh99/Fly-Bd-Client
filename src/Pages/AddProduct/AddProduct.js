@@ -38,6 +38,7 @@ const AddProduct = () => {
           
                   <input  placeholder="Package Name" defaultValue="" {...register("name",{ required: true })} />
                   <input  placeholder="Price" defaultValue="" {...register("price", { required: true })} />
+                  <input  placeholder="Duration" defaultValue="" {...register("duration", { required: true })} />
                   <input placeholder="Description" defaultValue="" {...register("describe",{ required: true })} />
                   <input placeholder="Image Link" defaultValue="" {...register("image",{ required: true })} />
                   <Button type="submit" className='btn-book d-block'>Add Item</Button>

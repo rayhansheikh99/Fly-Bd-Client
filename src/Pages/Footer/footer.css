@@ -47,3 +47,9 @@
   .footer-menu-container{
     display: block;
   }
+  @media only screen and (max-width: 640px){
+    .footer-input{
+      width: 80%;
+    }
+    
+  }

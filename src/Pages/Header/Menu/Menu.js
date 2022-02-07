@@ -26,17 +26,17 @@ const Menu = () => {
   <Navbar.Toggle aria-controls="responsive-navbar-nav" />
   <Navbar.Collapse id="responsive-navbar-nav">
     <Nav className="me-auto">
-      <Nav.Link as={Link} to="/home" className='menu-hover text-secondary'>Home</Nav.Link>
-      <Nav.Link as={Link} to="/packages" className='menu-hover text-secondary'>Packages</Nav.Link>
+      <Nav.Link as={Link} to="/home" className='menu-hover text-center text-secondary'>Home</Nav.Link>
+      <Nav.Link as={Link} to="/packages" className='menu-hover text-center text-secondary'>Packages</Nav.Link>
     </Nav>
     <Nav>
-    {user.email && <Nav.Link as={Link} to="/dashboard" className='menu-hover me-3 text-secondary'>Dashboard</Nav.Link>}
+    {user.email && <Nav.Link as={Link} to="/dashboard" className='menu-hover text-center me-3 text-secondary'>Dashboard</Nav.Link>}
       {user?.email?
-       <Nav.Link onClick={logOut} as={Link} to="/login" className='me-5 menu-hover bg-danger text-white rounded'>Logout</Nav.Link>:
-      <Nav.Link as={Link} to="/login" className='menu-hover bg-success text-white rounded'>Login</Nav.Link>}
+       <Nav.Link onClick={logOut} as={Link} to="/login" className='me-5 text-center menu-hover bg-danger text-white rounded'>Logout</Nav.Link>:
+      <Nav.Link as={Link} to="/login" className='menu-hover text-center bg-success text-white rounded'>Login</Nav.Link>}
     </Nav>
     {user?.email?
-      <Navbar.Text className='text-secondary'>
+      <Navbar.Text className='text-center text-secondary'>
         <FontAwesomeIcon className='paper-icon' icon={faUserAlt}/>{user?.displayName}
       </Navbar.Text>: ('')}
     

@@ -44,9 +44,9 @@ const ManageProducts = () => {
                        
                     </Col>
                     <Col className='mt-5 mx-auto' md={9} xs={8}>
-                    <h4 className='mt-5'>Products Management</h4>
+                    <h4 className='mt-5 text-center'>PACKAGE MANAGEMENT</h4>
                     <div className='mt-5'>
-                    <div><h4>OUR PRODUCTS</h4></div>
+                    <div><h4>OUR PACKAGES</h4></div>
                         <div className="row row-cols-1 row-cols-md-3 g-4 pb-3 mt-3">
                         
                         {

@@ -15,7 +15,7 @@ const Footer = () => {
           
         <div className="footer-container">
         <div className="container">
-        <div className="right-footer-container">
+        <div className="right-footer-container text-center">
                 <h5>Start using FlyBD today</h5>
                 <input
                   className="footer-input"
@@ -28,9 +28,9 @@ const Footer = () => {
 
           <div className="row">
             <div className="col-md-5">
-              <div className="left-container text-start mt-4">
+              <div className="left-container text-center text-start mt-4">
                 <h5>Let's chat</h5>
-                <div className="icons-container d-flex text-center ">
+                <div className="icons-container d-flex justify-content-center ">
                   <div className="icon">
                   <a href="https://www.instagram.com/" target="_blank" rel='noreferrer'><FontAwesomeIcon icon={faInstagramSquare} /></a>
                   </div>
@@ -50,10 +50,10 @@ const Footer = () => {
               <div className="footer-menu-container">
                 <ul>
                   
-                  <Nav.Link className="footer-menu" as={Link} to="/home#home">Home</Nav.Link>
-                  <Nav.Link className="footer-menu" as={Link} to="/products">Packages</Nav.Link>
-                  <Nav.Link className="footer-menu" as={Link} to="/about#about">About Us</Nav.Link>
-                  <Nav.Link className="footer-menu" as={Link} to="/contact#contact">Contact Us</Nav.Link>
+                  <Nav.Link className="footer-menu text-center" as={Link} to="/home#home">Home</Nav.Link>
+                  <Nav.Link className="footer-menu text-center" as={Link} to="/products">Packages</Nav.Link>
+                  <Nav.Link className="footer-menu text-center" as={Link} to="/about#about">About Us</Nav.Link>
+                  <Nav.Link className="footer-menu text-center" as={Link} to="/contact#contact">Contact Us</Nav.Link>
             
                 </ul>
               </div>

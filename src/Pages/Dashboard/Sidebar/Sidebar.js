@@ -32,7 +32,7 @@ const Sidebar = () => {
               <CDBSidebarMenuItem className='text-white' icon="columns">Dashboard</CDBSidebarMenuItem>
             </NavLink>
             {admin &&<NavLink exact to="/addproduct" activeClassName="activeClicked">
-              <CDBSidebarMenuItem className='text-white' icon="plus-circle">Add Product</CDBSidebarMenuItem>
+              <CDBSidebarMenuItem className='text-white' icon="plus-circle">Add Package</CDBSidebarMenuItem>
             </NavLink>}
             {admin &&<NavLink exact to="/makeadmin" activeClassName="activeClicked">
               <CDBSidebarMenuItem className='text-white' icon="user">Make Admin</CDBSidebarMenuItem>
@@ -44,7 +44,7 @@ const Sidebar = () => {
             </NavLink>}
             {admin &&<NavLink exact to="/manageproducts" activeClassName="activeClicked">
               <CDBSidebarMenuItem className='text-white' icon="tasks">
-                Manage Products
+                Manage Packages
               </CDBSidebarMenuItem>
             </NavLink>}
             {user?.email &&<NavLink exact to="/myorders" activeClassName="activeClicked">
