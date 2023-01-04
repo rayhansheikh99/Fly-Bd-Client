@@ -9,7 +9,7 @@ const AddProduct = () => {
       //useform use here and POST Method Apply
       const { register, handleSubmit, reset } = useForm();
       const onSubmit = data => {
-          fetch('https://fast-coast-67551.herokuapp.com/packages', {
+          fetch('https://fly-bd-server.onrender.com/packages', {
               method: 'POST',
               headers: {
                   'content-type': 'application/json'
@@ -28,19 +28,19 @@ const AddProduct = () => {
         
           <div className=''>
                  <Row>
-                    <Col className='sidebar' md={2} xs={2}>      
+                    <Col className='sidebar' md={2} xs={6}>      
                     <Sidebar/>
                        
                     </Col>
-                    <Col className='mx-auto' md={10} xs={10}>
-                    <h4 className='text-center'>Add Package From Here</h4>
-              <form className="booking-form product-form" onSubmit={handleSubmit(onSubmit)}>
+                    <Col className='mx-auto px-0' md={10} xs={6}>
+                    <h4 className='addpackage text-center'>Add Package From Here</h4>
+              <form className="product-form" onSubmit={handleSubmit(onSubmit)}>
           
-                  <input  placeholder="Package Name" defaultValue="" {...register("name",{ required: true })} />
-                  <input  placeholder="Price" defaultValue="" {...register("price", { required: true })} />
-                  <input  placeholder="Duration" defaultValue="" {...register("duration", { required: true })} />
-                  <input placeholder="Description" defaultValue="" {...register("describe",{ required: true })} />
-                  <input placeholder="Image Link" defaultValue="" {...register("image",{ required: true })} />
+                  <input className='product-form1 d-block my-1'  placeholder="Package Name" defaultValue="" {...register("name",{ required: true })} />
+                  <input className='product-form1 d-block my-1' placeholder="Price" defaultValue="" {...register("price", { required: true })} />
+                  <input className='product-form1 d-block my-1' placeholder="Duration" defaultValue="" {...register("duration", { required: true })} />
+                  <input className='product-form1 d-block my-1' placeholder="Description" defaultValue="" {...register("describe",{ required: true })} />
+                  <input className='product-form1 d-block my-1' placeholder="Image Link" defaultValue="" {...register("image",{ required: true })} />
                   <Button type="submit" className='btn-book d-block'>Add Item</Button>
               </form>
                     </Col> 

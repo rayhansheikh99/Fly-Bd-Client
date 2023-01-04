@@ -2,16 +2,27 @@
     margin-left: 38%;
     margin-top: 20px;
  }
+ .product-form1{
+    width: 300px;
+    margin-left: 0;
+     
+ }
  .product-details{
     margin-top: 90px;
  }
  @media only screen and (max-width: 640px){
-     .product-form{
-         margin-top: 20px;
-         margin-left: 0;
+     .product-form1{
+        width: 180px !important;
+        margin-left: 0 !important;
+         
      }
-     .product-details h4{
-         margin-top: 80px;
-         text-align: left;
+     .product-form{
+        margin-left: 0%;
+        margin-top: 20px;
+     }
+     
+     .addpackage{
+         font-size: 15px;
+         margin-left: 0 ;
      }
  }

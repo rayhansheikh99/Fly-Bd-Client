@@ -20,17 +20,6 @@ const useFirebase = ()=>{
     // google sign in 
     const provider = new GoogleAuthProvider()
     const auth = getAuth();
- 
-    // const loginWithGoogle = (location, history) => {
-    //     setIsLoading(true);
-    //     // saveUser(user.email, user.displayName, 'PUT');
-    //    signInWithPopup(auth, provider)
-    //    .then((result) => {
-    //     const destination = location?.state?.from || '/';
-    //     history.replace(destination);
-    //    })
-     
-    // }
 
     const signInWithGoogle = (location, history) => {
         setIsLoading(true);
@@ -118,7 +107,7 @@ const useFirebase = ()=>{
     },[])
 
     useEffect(() => {
-        fetch(`https://fast-coast-67551.herokuapp.com/users/${user.email}`)
+        fetch(`https://fly-bd-server.onrender.com/users/${user.email}`)
             .then(res => res.json())
             .then(data => setAdmin(data.admin))
     }, [user.email])
@@ -133,7 +122,7 @@ const useFirebase = ()=>{
 
     const saveUser = (email, displayName, method) => {
         const user = { email, displayName };
-        fetch('https://fast-coast-67551.herokuapp.com/users', {
+        fetch('https://fly-bd-server.onrender.com/users', {
             method: method,
             headers: {
                 'content-type': 'application/json'

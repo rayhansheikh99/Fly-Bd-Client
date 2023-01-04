@@ -10,7 +10,7 @@ const ManageProducts = () => {
    
     // data fetch 
     useEffect(()=>{
-        fetch('https://fast-coast-67551.herokuapp.com/packages')
+        fetch('https://fly-bd-server.onrender.com/packages')
         .then(res=>res.json())
         .then(data=> setProducts(data))
 
@@ -19,7 +19,7 @@ const ManageProducts = () => {
     const handleDeleteProduct = id =>{
         const proceed = window.confirm("Are you want to delete?")
         if(proceed){
-            const url = `https://fast-coast-67551.herokuapp.com/packages/${id}`
+            const url = `https://fly-bd-server.onrender.com/packages/${id}`
         fetch(url, {
             method:'DELETE'
         })

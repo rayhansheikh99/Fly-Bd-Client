@@ -12,7 +12,7 @@ const Booking = () => {
     const {serviceId} = useParams();
 
     useEffect(()=>{
-        fetch(`https://fast-coast-67551.herokuapp.com/packages`)
+        fetch(`https://fly-bd-server.onrender.com/packages`)
         .then(res => res.json())
         .then(data => setProduct(data))
     },[])
@@ -28,7 +28,7 @@ const Booking = () => {
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
     const { user } = useAuth();
     const onSubmit = data => {
-        fetch('https://fast-coast-67551.herokuapp.com/orders', {
+        fetch('https://fly-bd-server.onrender.com/orders', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -42,7 +42,10 @@ const Booking = () => {
                     reset();
                 }
             })
+            
+       
     };
+    
     return (
         <div className=''>
             <form className="booking-form" onSubmit={handleSubmit(onSubmit)}>

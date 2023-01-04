@@ -14,7 +14,7 @@ const MyOrders = () => {
     
     // data fetch 
     useEffect(()=>{
-        fetch(`https://fast-coast-67551.herokuapp.com/orders?email=${user.email}`)
+        fetch(`https://fly-bd-server.onrender.com/orders?email=${user.email}`)
         .then(res=>res.json())
         .then(data=> setOrders(data))
         console.log(orders.name)
@@ -26,7 +26,7 @@ const MyOrders = () => {
            const handleDeleteOrder = id =>{
             const proceed = window.confirm("Are you want to delete?")
             if(proceed){
-                const url = `https://fast-coast-67551.herokuapp.com/orders/${id}`
+                const url = `https://fly-bd-server.onrender.com/orders/${id}`
             fetch(url, {
                 method:'DELETE'
             })

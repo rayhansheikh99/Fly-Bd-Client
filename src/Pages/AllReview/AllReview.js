@@ -7,7 +7,7 @@ const AllReview = () => {
     const [reviews, setReviews]=useState([])
     // data fetch 
     useEffect(()=>{
-        fetch('https://fast-coast-67551.herokuapp.com/reviews')
+        fetch('https://fly-bd-server.onrender.com/reviews')
         .then(res=>res.json())
         .then(data=> setReviews(data))
 

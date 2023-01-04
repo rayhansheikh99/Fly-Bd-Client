@@ -11,7 +11,7 @@ const Review = () => {
     const { register, handleSubmit, reset } = useForm();
     const onSubmit = data => {
         console.log(data)
-        fetch('https://fast-coast-67551.herokuapp.com/reviews', {
+        fetch('https://fly-bd-server.onrender.com/reviews', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

@@ -12,7 +12,7 @@ const MakeAdmin = () => {
     }
     const handleAdminSubmit = data => {
         const user = { email };
-        fetch('https://fast-coast-67551.herokuapp.com/users/admin', {
+        fetch('https://fly-bd-server.onrender.com/users/admin', {
             method: 'PUT',
             headers: {
         
@@ -36,15 +36,15 @@ const MakeAdmin = () => {
     return (
         <div className=''>
              <Row>
-                    <Col className='sidebar' md={2} xs={2}>      
+                    <Col className='sidebar' md={2} xs={6}>      
                     <Sidebar/>
                        
                     </Col>
-                    <Col className='' md={10} xs={10}>
-                    <h4 className='mt-5 text-center'>Make an Admin</h4>
+                    <Col className='' md={10} xs={6}>
+                    <h4 className='mt-5 .addpackage text-center'>Make an Admin</h4>
                     <Form  onSubmit={handleAdminSubmit}>
-                    <Form.Control onBlur={handleOnBlur} className='w-50 mx-auto mb-2 mt-2' type="email" placeholder="Enter email" />
-                    <Button className='d-block mx-auto text-center' type="submit">Make Admin</Button>
+                    <Form.Control onBlur={handleOnBlur} className='w-50 product-form1 mx-auto mb-2 mt-2' type="email" placeholder="Enter email" />
+                    <Button className='d-block mx-auto' type="submit">Make Admin</Button>
                     </Form>
                     </Col> 
                 </Row>

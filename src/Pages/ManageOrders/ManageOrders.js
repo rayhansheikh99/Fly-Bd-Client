@@ -2,7 +2,6 @@ import { faTrash } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useEffect, useState } from 'react';
 import { Button, Card, Col, ListGroup, ListGroupItem, Row } from 'react-bootstrap';
-import useAuth from '../../Hooks/useAuth';
 import Sidebar from '../Dashboard/Sidebar/Sidebar';
 import './manageorders.css'
 
@@ -11,7 +10,7 @@ const ManageOrders = () => {
     const [orders, setOrders]=useState([])
     // data fetch 
     useEffect(()=>{
-        fetch('https://fast-coast-67551.herokuapp.com/allorder')
+        fetch('https://fly-bd-server.onrender.com/allorder')
         .then(res=>res.json())
         .then(data=> setOrders(data))
 
@@ -22,7 +21,7 @@ const ManageOrders = () => {
        const handleDeleteOrder = id =>{
         const proceed = window.confirm("Are you want to delete?")
         if(proceed){
-            const url = `https://fast-coast-67551.herokuapp.com/orders/${id}`
+            const url = `https://fly-bd-server.onrender.com/orders/${id}`
         fetch(url, {
             method:'DELETE'
         })
@@ -63,7 +62,7 @@ const ManageOrders = () => {
                         </ListGroup>
                         <Card.Body>
                         <Button onClick={()=>handleDeleteOrder(order._id)} className='px-2 btn-design'><FontAwesomeIcon onClick={()=>handleDeleteOrder(order._id)} className='me-1 icon-delete' icon={faTrash} />DELETE</Button>
-                        {/* <Button className='me-2 py-2 px-2'>{order.status}</Button> */}
+                        <Button className=' btn-design ms-5 px-3'>ACCEPT</Button>
                         </Card.Body>
                     </Card>
                     
